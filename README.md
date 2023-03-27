@@ -5,6 +5,9 @@ This is a password generator that allows the random generation of 8 to 128 chara
 ./Develop/passgenscreenshot.png
 <img src="./Develop/passgenscreenshot.png">
 
+## live site screenshot
+<img src="./Develop/livesitescreen.png">
+
 ## Built with
 VS Code
 image captured through photoshop
