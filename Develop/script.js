@@ -7,21 +7,33 @@ var smallcase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m"
 var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V","W","X", "Y","Z"];
 var numerocase = ["1","2","3","4","5","6","7","8","9","0"];
 var specialchar = ["@",".","`","~","!","$","#"];
-var firstswitch = document.querySelector(".caps");
-var secondswitch = document.querySelector(".chars");
+var firstswitch = document.querySelector("#caps");
+var secondswitch = document.querySelector("#chars");
 var upperbutton = false;
 var charbutton = false;
 var choosechar = 0;
 var eligibleChar = smallcase;
-//firstswitch.addEventListener("click", uppercase = true);
+firstswitch.addEventListener("click", capschange);
+secondswitch.addEventListener("click", charchange);
 //that is not how this slider works.
 
-    if (upperbutton == true){
-      eligibleChar = [eligibleChar + uppercase];
-    }
-    if(charbutton == true){
-      eligibleChar = [eligibleChar + specialchar];
-    }
+//this function is purely to get arround a weird error
+//script.js:16 Uncaught TypeError: Failed to execute 'addEventListener' on 'EventTarget': parameter 2 is not of type 'Object'.
+//at script.js:16:13
+function capschange(){
+  upperbutton = true;
+  eligibleChar = eligibleChar.concat(uppercase);
+  firstswitch.setAttribute('style', 'background-color: green;');
+console.log(eligibleChar);
+}
+
+function charchange(){
+  charbutton = true;
+  eligibleChar = eligibleChar.concat(specialchar);
+  secondswitch.setAttribute('style', 'background-color: green;');
+}
+   
+    
 
 
 
