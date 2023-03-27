@@ -6,6 +6,7 @@ This is a password generator that allows the random generation of 8 to 128 chara
 <img src="./Develop/passgenscreenshot.png">
 
 ## live site screenshot
+https://rethissunstar.github.io/passgen2/
 <img src="./Develop/livesitescreen.png">
 
 ## Built with
